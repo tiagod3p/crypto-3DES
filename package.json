@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js",
+    "dev": "nodemon src/services/ftp-connection.js",
     "start": "node src/index.js"
   },
   "keywords": [],
