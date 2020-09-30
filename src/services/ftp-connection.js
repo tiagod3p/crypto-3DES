@@ -18,4 +18,4 @@ const ftpConnection = async () => {
   }
 }
 
-ftpConnection()
+export default ftpConnection
