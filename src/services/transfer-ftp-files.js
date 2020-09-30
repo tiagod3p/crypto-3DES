@@ -15,3 +15,5 @@ const transferFiles = async (ftpConnection, fs, convertCSVtoJSON, csvTransformer
       fs.unlink(csvFilePath, (err) => console.error(err));
   })
 }
+
+export default transferFiles
