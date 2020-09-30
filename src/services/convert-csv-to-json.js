@@ -7,3 +7,5 @@ const convertCSVtoJSON = async (csvTransformer, file) => {
 
   return jsonStringify
 }
+
+export default convertCSVtoJSON
