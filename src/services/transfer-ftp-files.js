@@ -1,4 +1,4 @@
-const transferFiles = async (ftpConnection, fs) => {
+const transferFiles = async (ftpConnection, fs, convertCSVtoJSON, csvTransformer) => {
   const client = await ftpConnection()
   const fileList = await client.list('./docs');
   await client.cd('./docs')
@@ -7,5 +7,7 @@ const transferFiles = async (ftpConnection, fs) => {
         continue;
       }
       await client.downloadTo(`./temp/${file.name}`, file.name);
+
+      const jsonStringify = await convertCSVtoJSON(csvTransformer, file)
   })
 }
