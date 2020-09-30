@@ -14,6 +14,8 @@ const transferFiles = async (ftpConnection, fs, convertCSVtoJSON, csvTransformer
       fs.writeFile(`./json/${arquivo.name.replace('.csv', '.json')}`, jsonEncrypted, (err) => console.error(err));
       fs.unlink(csvFilePath, (err) => console.error(err));
   })
+
+  client.close()
 }
 
 export default transferFiles
