@@ -11,5 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "basic-ftp": "^4.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
